@@ -1,6 +1,26 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
+:root {
+  --background: #ffffff;
+  --text: #111111;
+  --accent: #0078ff;
+  --hero-bg: #f0f4ff;
+}
+
+[data-theme="dark"] {
+  --background: #111111;
+  --text: #ffffff;
+  --accent: #3399ff;
+  --hero-bg: #1a1a1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
 }
