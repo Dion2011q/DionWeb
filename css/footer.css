@@ -1,7 +1,7 @@
 footer {
   text-align: center;
   padding: 30px;
-  background: var(--hero-bg);
+  background: var(--header-bg);
   margin-top: 50px;
 }
 

@@ -5,8 +5,13 @@
   cursor: pointer;
 }
 
+:root {
+  --header-bg: #123456;
+  --background: #abcdef;
+}
+
 .hero {
-  background-color: var(--hero-bg);
+  background: linear-gradient(180deg, var(--header-bg) 30%, var(--background) 70%);
   padding: 100px 20px;
   text-align: center;
 }

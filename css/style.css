@@ -1,12 +1,14 @@
 :root {
-  --background: #ffffff;
-  --text: #111111;
+  --background: #F5F5F5;
+  --header-bg: #e4e4e4;
+  --text: #000000;
   --accent: #0078ff;
   --hero-bg: #f0f4ff;
 }
 
 [data-theme="dark"] {
-  --background: #111111;
+  --background: #1A1A1A;
+  --header-bg: #1e1e1e;
   --text: #ffffff;
   --accent: #3399ff;
   --hero-bg: #1a1a1a;
