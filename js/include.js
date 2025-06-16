@@ -22,6 +22,14 @@ function includeHTML() {
           if (include.id === 'header-placeholder') {
             setTimeout(() => initThemeToggle(), 0);
           }
+
+          // Als het de footer is, zet het jaar
+          if (include.id === 'footer-placeholder') {
+            const yearSpan = document.getElementById('year');
+            if (yearSpan) {
+              yearSpan.textContent = new Date().getFullYear();
+            }
+          }
         })
         .catch(error => {
           console.error(`Fout bij laden van ${include.file}:`, error);

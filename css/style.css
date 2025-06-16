@@ -2,22 +2,16 @@
   --background: #F5F5F5;
   --header-bg: #e4e4e4;
   --text: #000000;
-  --accent: #0078ff;
-  --hero-bg: #f0f4ff;
+  --accent: #1163c8;
+  --button-bg: linear-gradient(135deg, #104bac, #1163c8);
 }
 
 [data-theme="dark"] {
   --background: #1A1A1A;
   --header-bg: #1e1e1e;
   --text: #ffffff;
-  --accent: #3399ff;
-  --hero-bg: #1a1a1a;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --accent: #1163c8;
+  --button-bg: linear-gradient(135deg, #104bac, #1163c8);
 }
 
 body {
@@ -25,6 +19,9 @@ body {
   background-color: var(--background);
   color: var(--text);
   transition: background-color 0.3s, color 0.3s;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
@@ -32,4 +29,36 @@ main {
     height: 100%;
     flex: 1;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    background: var(--button-bg);
+    color: white;
+    padding: 12px 32px;
+    margin: 24px;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    z-index: 99999999999999;
+    border: none;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #0D4A9B, #1155A0);
+    transform: scale(1.08);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    outline: 2px solid red;
+}
+
+.button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }

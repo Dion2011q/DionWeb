@@ -1,52 +1,109 @@
 header {
   background: var(--header-bg);
   transition: background-color 0.3s, color 0.3s;
-  padding: 20px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-header h1 {
-  font-size: 28px;
-  color: var(--accent);
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--text);
-  font-weight: bold;
-  transition: color 0.2s;
-}
-
-nav a:hover {
-  color: var(--accent);
+  padding: 0;
 }
 
 .container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 8px 24px;
   display: flex;
-  gap: 24px;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-left a {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  gap: 10px;
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 36px;
+  height: 36px;
+}
+
+.header-left h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.header-center nav ul {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-center nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.header-center nav a:hover {
+    color: red;
+    transition: color 0.2s ease;
+}
+
+
+
+.header-center nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: red;
+    transition: width 0.3s ease;
+}
+
+.header-center nav a:hover::after {
+    width: 100%;
+}
+
+.header-right {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+  .header-center {
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .header-center nav ul {
+    gap: 18px;
+  }
 }
