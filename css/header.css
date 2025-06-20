@@ -6,6 +6,11 @@ header {
   width: 100%;
 }
 
+#headcolumn {
+  flex-direction: row;
+  
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
