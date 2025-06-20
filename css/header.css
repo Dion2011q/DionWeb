@@ -7,7 +7,7 @@ header {
 }
 
 .container {
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 8px 24px;
   display: flex;
@@ -70,8 +70,6 @@ header {
     color: red;
     transition: color 0.2s ease;
 }
-
-
 
 .header-center nav a::after {
     content: '';
